@@ -1,2 +1,7 @@
 ---
 extends: default
+
+rules:
+  braces:
+    min-spaces-inside: 0
+    max-spaces-outside: 1
