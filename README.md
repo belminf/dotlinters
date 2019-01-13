@@ -7,5 +7,4 @@ Some of my linter configuration.
 git clone git@github.com:belminf/dotlinters.git ~/.linters
 cd ~/.linters
 make install
-
 ```
