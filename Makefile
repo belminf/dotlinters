@@ -8,7 +8,7 @@ else
     readlink := readlink
 endif
 
-install: $(installer)_install_prettier $(installer)_install_yamllint setup_prettier setup_yamllint
+install: $(installer)_install_prettier $(installer)_install_yamllint setup_prettier setup_yamllint setup_rubocop
 
 arch_install_prettier:
 	yay -S --needed --noconfirm prettier || true
@@ -30,3 +30,7 @@ setup_prettier:
 setup_yamllint:
 	mkdir -p ~/.config/yamllint
 	ln -sf $$($(readlink) -f yamllint.yaml) ~/.config/yamllint/config
+
+setup_rubocop:
+	hash rubocop 2>/dev/null || gem install --user-install rubocop
+	ln -sf $$($(readlink) -f rubocop.yaml) ~/.rubocop.yml
