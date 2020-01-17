@@ -8,7 +8,7 @@ else
     readlink := readlink
 endif
 
-install: $(installer)_install_prettier $(installer)_install_yamllint setup_prettier setup_yamllint setup_rubocop
+install: $(installer)_install_prettier $(installer)_install_yamllint setup_prettier setup_yamllint setup_rubocop setup_flake8
 
 arch_install_prettier:
 	yay -S --needed --noconfirm prettier || true
@@ -34,3 +34,6 @@ setup_yamllint:
 setup_rubocop:
 	hash rubocop 2>/dev/null || gem install --user-install rubocop
 	ln -sf $$($(readlink) -f rubocop.yaml) ~/.rubocop.yml
+
+setup_flake8:
+	ln -sf $$($(readlink) -f flake8.ini) ~/.config/flake8
