@@ -1,6 +1,6 @@
 ---
 AllCops:
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.5
 Style/MutableConstant:
   Enabled: false
 Style/StringLiterals:
@@ -17,5 +17,9 @@ Style/SymbolArray:
   Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false
-Layout/EmptyLineAfterGuardClause:
+Style/EmptyLineAfterGuardClause:
+  Enabled: false
+Style/WordArray:
+  MinSize: 6
+Syle/SingleArgumentDig:
   Enabled: false
