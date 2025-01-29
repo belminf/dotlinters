@@ -1,6 +1,4 @@
 ---
-AllCops:
-  TargetRubyVersion: 2.5
 Style/MutableConstant:
   Enabled: false
 Style/StringLiterals:
@@ -10,7 +8,9 @@ Metrics/LineLength:
 Style/PercentLiteralDelimiters:
   Enabled: false
 Style/TrailingCommaInHashLiteral:
-  Enabled: false
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
 Style/NumericLiteralPrefix:
   Enabled: false
 Style/SymbolArray:
