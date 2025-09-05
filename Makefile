@@ -8,7 +8,7 @@ else
     readlink := readlink
 endif
 
-install: $(installer)_install_prettier $(installer)_install_yamllint setup_prettier setup_yamllint setup_rubocop setup_flake8
+install: $(installer)_install_prettier $(installer)_install_yamllint setup_prettier setup_yamllint setup_rubocop setup_flake8 setup_shellcheck
 
 arch_install_prettier:
 	yay -S --needed --noconfirm prettier || true
@@ -37,3 +37,6 @@ setup_rubocop:
 
 setup_flake8:
 	ln -sf $$($(readlink) -f flake8.ini) ~/.config/flake8
+
+setup_shellcheck:
+	ln -sf $$($(readlink) -f shellcheckrc) ~/.config/shellcheckrc

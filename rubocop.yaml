@@ -1,10 +1,12 @@
 ---
+Layout/LineLength:
+  Enabled: false
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
 Style/MutableConstant:
   Enabled: false
 Style/StringLiterals:
   Enabled: true
-Metrics/LineLength:
-  Enabled: false
 Style/PercentLiteralDelimiters:
   Enabled: false
 Style/TrailingCommaInHashLiteral:
@@ -17,9 +19,7 @@ Style/SymbolArray:
   Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false
-Style/EmptyLineAfterGuardClause:
-  Enabled: false
 Style/WordArray:
   MinSize: 6
-Syle/SingleArgumentDig:
+Style/SingleArgumentDig:
   Enabled: false
